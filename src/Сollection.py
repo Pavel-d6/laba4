@@ -3,6 +3,9 @@ from book import Book
 
 
 class BookCollection:
+    """
+    Пользовательская списочная коллекция книг.
+    """
     def __init__(self, books: Optional[List[Book]] = None):
         self._books: List[Book] = []
         if books:
@@ -50,6 +53,10 @@ class BookCollection:
 
 
 class IndexDict:
+    """
+    Пользовательская словарная коллекция книг.
+    Индексирует книги по ISBN, автору, году.
+    """
     def __init__(self):
         self._isbn_index: dict[str, Book] = {}
         self._author_index: dict[str, List[Book]] = {}
